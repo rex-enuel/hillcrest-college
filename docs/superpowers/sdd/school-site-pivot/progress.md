@@ -1,0 +1,1 @@
+# SDD ledger — plan: C:\Users\Hp extra\hillcrest-college-project\docs\superpowers\plans\2026-11-09-school-site-pivot.md

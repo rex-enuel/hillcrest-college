@@ -1,0 +1,68 @@
+<svg width="180" height="180" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
+  <!-- Hillcrest College Icon System -->
+  
+  <!-- Icon 1: Hill/Location -->
+  <g id="icon-hill" transform="translate(0,0)">
+    <polygon points="90,15 30,150 150,150" fill="none" stroke="#d4af37" stroke-width="3"/>
+    <rect x="65" y="115" width="50" height="25" fill="#8b4513" rx="2"/>
+    <circle cx="35" cy="30" r="5" fill="#d4af37"/>
+  </g>
+  
+  <!-- Icon 2: Inclusion -->
+  <g id="icon-inclusion" transform="translate(0,190)">
+    <circle cx="90" cy="80" r="65" fill="none" stroke="#4a9da8" stroke-width="3"/>
+    <path d="M60 85 L120 85" stroke="#8b4513" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="60" cy="85" r="5" fill="#4a9da8"/>
+    <circle cx="120" cy="85" r="5" fill="#4a9da8"/>
+  </g>
+  
+  <!-- Icon 3: Assembly/Discipline -->
+  <g id="icon-assembly" transform="translate(0,380)">
+    <rect x="50" y="55" width="80" height="100" rx="4" fill="#cc7357" stroke="#8b4513" stroke-width="2"/>
+    <path d="M90 65 L90 110 L105 110 L105 155" stroke="#8b4513" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="80" cy="60" r="6" fill="#d4af37"/>
+  </g>
+  
+  <!-- Icon 4: STEM/Partnership -->
+  <g id="icon-stem" transform="translate(0,570)">
+    <polygon points="90,25 145,105 90,155 35,105" fill="none" stroke="#6abf69" stroke-width="3"/>
+    <rect x="75" y="85" width="30" height="35" fill="#d4af37"/>
+    <circle cx="90" cy="80" r="5" fill="#6abf69"/>
+    <circle cx="90" cy="95" r="2" fill="#4a9da8"/>
+    <circle cx="90" cy="110" r="2" fill="#4a9da8"/>
+  </g>
+  
+  <!-- Icon 5: Results/Achievement -->
+  <g id="icon-results" transform="translate(0,760)">
+    <rect x="50" y="70" width="80" height="80" rx="6" fill="none" stroke="#d4af37" stroke-width="3"/>
+    <path d="M90 95 L90 130" stroke="#8b4513" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="85" cy="100" r="5" fill="#8b4513"/>
+    <circle cx="95" cy="100" r="5" fill="#8b4513"/>
+    <path d="M80 115 L100 115" stroke="#8b4513" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="80" cy="120" r="3" fill="#6abf69"/>
+    <circle cx="100" cy="120" r="3" fill="#6abf69"/>
+  </g>
+  
+  <!-- Icon 6: Parent Portal -->
+  <g id="icon-portal" transform="translate(0,950)">
+    <rect x="55" y="65" width="70" height="85" rx="4" fill="#e8f4f8" stroke="#4a9da8" stroke-width="2"/>
+    <path d="M55 85 L125 85" stroke="#4a9da8" stroke-width="2" stroke-linecap="round"/>
+    <rect x="70" y="90" width="40" height="25" rx="2" fill="#a8d5e2"/>
+    <circle cx="90" cy="105" r="3" fill="#4a9da8"/>
+  </g>
+  
+  <!-- Icon 7: Schedule/Rhythm -->
+  <g id="icon-schedule" transform="translate(0,1140)">
+    <rect x="50" y="70" width="80" height="80" rx="6" fill="none" stroke="#8b4513" stroke-width="3"/>
+    <path d="M90 85 L90 110 L70 110" stroke="#8b4513" stroke-width="2" stroke-linecap="round"/>
+    <path d="M70 125 L90 125 L90 145" stroke="#8b4513" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="75" cy="80" r="4" fill="#d4af37"/>
+    <circle cx="105" cy="80" r="4" fill="#d4af37"/>
+  </g>
+  
+  <!-- Icon 8: WhatsApp -->
+  <g id="icon-whatsapp" transform="translate(0,1330)">
+    <path d="M90 15 C50 15 20 45 20 85 C20 125 50 155 90 155 C130 155 160 125 160 85 C160 45 130 15 90 15 Z" fill="#25D366"/>
+    <path d="M75 70 L85 55 L105 55 L115 70 L130 55 L145 70 L140 85 L125 100 L110 100 L90 85 Z" fill="#white"/>
+  </g>
+</svg>

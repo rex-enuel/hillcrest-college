@@ -1,0 +1,44 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Hillcrest College Logo Variations -->
+  
+  <!-- Variation 1: Hill Triangle Monogram -->
+  <g id="concept-1">
+    <polygon points="100,20 40,180 160,180" fill="none" stroke="#d4af37" stroke-width="4"/>
+    <circle cx="100" cy="70" r="28" fill="#d4af37"/>
+    <text x="100" y="125" text-anchor="middle" font-size="16" fill="#8b4513" font-family="serif" font-weight="bold">HC</text>
+  </g>
+  
+  <!-- Variation 2: Inclusive Circle -->
+  <g id="concept-2" transform="translate(0,220)">
+    <circle cx="100" cy="60" r="50" fill="none" stroke="#d4af37" stroke-width="3"/>
+    <path d="M70 65 L130 65" stroke="#8b4513" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="75" cy="65" r="6" fill="#8b4513"/>
+    <circle cx="125" cy="65" r="6" fill="#8b4513"/>
+    <path d="M78 78 L122 78" stroke="#6abf69" stroke-width="3" stroke-linecap="round"/>
+    <text x="100" y="145" text-anchor="middle" font-size="14" fill="#8b4513" font-family="sans">INCLUSION</text>
+  </g>
+  
+  <!-- Variation 3: Heritage Shield -->
+  <g id="concept-3" transform="translate(0,440)">
+    <rect x="50" y="40" width="100" height="130" rx="10" fill="#d4af37" stroke="#8b4513" stroke-width="3"/>
+    <polygon points="100,30 30,180 170,180" fill="#cc7357"/>
+    <text x="100" y="95" text-anchor="middle" font-size="20" fill="#8b4513" font-family="serif" font-weight="bold">HILLCREST</text>
+    <text x="100" y="125" text-anchor="middle" font-size="12" fill="#8b4513" font-family="sans">COLLEGE</text>
+  </g>
+  
+  <!-- Variation 4: Rising Sun -->
+  <g id="concept-4" transform="translate(0,660)">
+    <circle cx="100" cy="90" r="45" fill="#d4af37"/>
+    <polygon points="100,25 180,90 100,155 20,90" fill="none" stroke="#8b4513" stroke-width="4"/>
+    <circle cx="100" cy="90" r="12" fill="#8b4513"/>
+    <path d="M100 45 L100 25" stroke="#8b4513" stroke-width="2"/>
+  </g>
+  
+  <!-- Variation 5: Modern Geometric -->
+  <g id="concept-5" transform="translate(0,880)">
+    <polygon points="100,30 170,140 130,150 30,150 70,140" fill="#cc7357" stroke="#8b4513" stroke-width="2"/>
+    <rect x="85" y="105" width="30" height="20" fill="#8b4513"/>
+    <circle cx="100" y="85" r="8" fill="#d4af37"/>
+    <text x="100" y="190" text-anchor="middle" font-size="14" fill="#8b4513" font-family="sans" font-weight="600">Hillcrest</text>
+  </g>
+</svg>

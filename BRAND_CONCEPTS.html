@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hillcrest College - Brand Concepts</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#fdf8f5',
+              100: '#f5eee8',
+              200: '#e8d8cf',
+              300: '#d4bba9',
+              400: '#b89981',
+              500: '#9a795e',
+              600: '#7a5f47',
+              700: '#5e4335',
+              800: '#422e23',
+              900: '#2a1c12'
+            },
+            heritage: {
+              gold: '#d4af37',
+              cream: '#fef8f0',
+              terracotta: '#cc7357',
+              brown: '#8b4513'
+            },
+            inclusive: {
+              accent: '#4a9da8',
+              warmth: '#e8f4f8',
+              growth: '#6abf69'
+            }
+          },
+          fontFamily: {
+            sans: ['Outfit', 'system-ui', 'sans-serif'],
+            serif: ['Cormorant Garamond', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap');
+    
+    :root {
+      --font-sans: 'Outfit', system-ui, sans-serif;
+      --font-serif: 'Cormorant Garamond', serif;
+    }
+    
+    body {
+      font-family: var(--font-sans);
+      background-color: #fef8f0;
+      color: #422e23;
+    }
+    
+    .font-serif-heading {
+      font-family: var(--font-serif);
+    }
+    
+    /* Animation for concept reveals */
+    .concept-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-heritage-cream text-primary-900">
+  <!-- Logo/Header -->
+  <header class="fixed top-6 left-6 z-50 bg-white/90 backdrop-blur-sm p-3 rounded-xl shadow-lg">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10">
+        <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="30,10 10,50 50,50" fill="#d4af37" stroke="#8b4513" stroke-width="2"/>
+          <rect x="22" y="40" width="8" height="12" fill="#8b4513"/>
+          <rect x="30" y="42" width="10" height="10" fill="#a0522d"/>
+          <circle cx="15" cy="5" r="6" fill="#d4af37"/>
+        </svg>
+      </div>
+      <div>
+        <div class="font-serif-heading font-bold text-base text-primary-900">Hillcrest</div>
+        <div class="text-xs text-primary-500">Brand Concepts</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-20 pb-12 container mx-auto px-6 lg:px-12 max-w-6xl">
+    <h1 class="text-4xl font-serif-heading text-center mb-4">Hillcrest College</h1>
+    <p class="text-center text-primary-600 mb-12 max-w-2xl mx-auto">
+      Brand Creative Strategy & Visual Concept Exploration
+    </p>
+
+    <!-- Strategy Section -->
+    <section class="bg-white rounded-2xl shadow-xl p-8 mb-12">
+      <h2 class="text-2xl font-serif-heading text-primary-900 mb-6">Visual Positioning Strategy</h2>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="font-bold text-lg mb-3">Core Identity</h3>
+          <ul class="space-y-2 text-sm text-primary-600">
+            <li>• Hilltop Location: <span class="text-primary-800">Majestic, grounding, unique</span></li>
+            <li>• Heritage (1983): <span class="text-primary-800">Established trust, generational value</span></li>
+            <li>• Inclusion: <span class="text-primary-800">Accessible for all abilities</span></li>
+            <li>• STEM Future: <span class="text-primary-800">Modern, forward-looking</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold text-lg mb-3">Emotional Architecture</h3>
+          <ul class="space-y-2 text-sm text-primary-600">
+            <li>• <span class="text-heritage-gold">Pride</span> - "40 years of excellence"</li>
+            <li>• <span class="text-inclusive-accent">Belonging</span> - "Every child finds their place"</li>
+            <li>• <span class="text-inclusive-growth">Aspirational</span> - "Path to university"</li>
+            <li>• <span class="text-heritage-terracotta">Stability</span> - "Traditional foundation"</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Logo Concepts -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-serif-heading text-center mb-8">Logo Concepts</h2>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Concept 1 -->
+        <div class="concept-card bg-white rounded-2xl shadow-lg p-6">
+          <div class="text-center mb-4">
+            <div class="w-16 h-16 mx-auto mb-3">
+              <svg viewBox="0 0 60 60" class="w-full h-full">
+                <polygon points="30,5 12,55 48,55" fill="none" stroke="#d4af37" stroke-width="3"/>
+                <circle cx="30" cy="20" r="8" fill="#d4af37"/>
+                <text x="30" y="42" text-anchor="middle" font-size="12" fill="#8b4513">HC</text>
+              </svg>
+            </div>
+            <h3 class="font-bold text-primary-900 text-sm">Concept 1: The Hill Crest</h3>
+            <p class="text-xs text-primary-500 mt-1">Monogram with triangle</p>
+          </div>
+          <div class="text-xs text-primary-600">
+            <p><strong>Decision:</strong> Uses triangle as hill silhouette. The "HC" monogram centralizes the hill's peak - representing both achievement and the school's elevated location.</p>
+            <p class="mt-2"><strong>Why:</strong> Direct geographic reference + lettermark for versatility. Gold circle = achievement/success.</p>
+          </div>
+        </div>
+
+        <!-- Concept 2 -->
+        <div class="concept-card bg-white rounded-2xl shadow-lg p-6">
+          <div class="text-center mb-4">
+            <div class="w-16 h-16 mx-auto mb-3">
+              <svg viewBox="0 0 60 60" class="w-full h-full">
+                <circle cx="30" cy="30" r="20" fill="none" stroke="#d4af37" stroke-width="3"/>
+                <path d="M20 35 L40 35" stroke="#8b4513" stroke-width="2"/>
+                <circle cx="25" cy="35" r="3" fill="#8b4513"/>
+                <circle cx="35" cy="35" r="3" fill="#8b4513"/>
+                <path d="M22 42 L38 42" stroke="#6abf69" stroke-width="2"/>
+              </svg>
+            </div>
+            <h3 class="font-bold text-primary-900 text-sm">Concept 2: Inclusive Unity</h3>
+            <p class="text-xs text-primary-500 mt-1">Circular unity</p>
+          </div>
+          <div class="text-xs text-primary-600">
+            <p><strong>Decision:</strong> Circle represents inclusivity and unity. Two figures holding hands show community. Green path suggests growth journey.</p>
+            <p class="mt-2"><strong>Why:</strong> Directly communicates special needs inclusion. Circular = no hierarchy, everyone connected.</p>
+          </div>
+        </div>
+
+        <!-- Concept 3 -->
+        <div class="concept-card bg-white rounded-2xl shadow-lg p-6">
+          <div class="text-center mb-4">
+            <div class="w-16 h-16 mx-auto mb-3">
+              <svg viewBox="0 0 60 60" class="w-full h-full">
+                <rect x="10" y="25" width="40" height="25" fill="none" stroke="#8b4513" stroke-width="2"/>
+                <polygon points="30,10 50,50 10,50" fill="#d4af37"/>
+                <text x="30" y="48" text-anchor="middle" font-size="14" fill="#8b4513" font-family="serif">HILLCREST</text>
+              </svg>
+            </div>
+            <h3 class="font-bold text-primary-900 text-sm">Concept 3: Heritage Badge</h3>
+            <p class="text-xs text-primary-500 mt-1">Shield badge</p>
+          </div>
+          <div class="text-xs text-primary-600">
+            <p><strong>Decision:</strong> Shield = protection, heritage. Triangle hat suggests school structure. Serif typography reinforces tradition.</p>
+            <p class="mt-2"><strong>Why:</strong> Military-like discipline meets educational protection. Feels established, trustworthy.</p>
+          </div>
+        </div>
+
+        <!-- Concept 4 -->
+        <div class="concept-card bg-white rounded-2xl shadow-lg p-6">
+          <div class="text-center mb-4">
+            <div class="w-16 h-16 mx-auto mb-3">
+              <svg viewBox="0 0 60 60" class="w-full h-full">
+                <circle cx="30" cy="35" r="15" fill="#d4af37"/>
+                <polygon points="25,35 35,35 30,25" fill="#8b4513"/>
+                <path d="M28 40 L32 40" stroke="#8b4513" stroke-width="2"/>
+                <circle cx="30" cy="20" r="4" fill="#8b4513"/>
+              </svg>
+            </div>
+            <h3 class="font-bold text-primary-900 text-sm">Concept 4: Rising Sun</h3>
+            <p class="text-xs text-primary-500 mt-1">Abstract symbolism</p>
+          </div>
+          <div class="text-xs text-primary-600">
+            <p><strong>Decision:</strong> Sun rising over hills = new day, new opportunities. Simple, memorable, modern.</p>
+            <p class="mt-2"><strong>Why:</strong> Positive, forward-looking. Works well on dark backgrounds. Easy to recognize quickly.</p>
+          </div>
+        </div>
+
+        <!-- Concept 5 -->
+        <div class="concept-card bg-white rounded-2xl shadow-lg p-6">
+          <div class="text-center mb-4">
+            <div class="w-16 h-16 mx-auto mb-3">
+              <svg viewBox="0 0 60 60" class="w-full h-full">
+                <path d="M30 10 L20 50 L40 50 Z" fill="#cc7357"/>
+                <rect x="25" y="35" width="10" height="12" fill="#8b4513"/>
+                <circle cx="30" y="28" r="3" fill="#d4af37"/>
+              </svg>
+            </div>
+            <h3 class="font-bold text-primary-900 text-sm">Concept 5: Modern Hill</h3>
+            <p class="text-xs text-primary-500 mt-1">Geometric modern</p>
+          </div>
+          <div class="text-xs text-primary-600">
+            <p><strong>Decision:</strong> Terracotta triangle = warmth. Simple, bold shapes. Modern sans-serif treatment.</p>
+            <p class="mt-2"><strong>Why:</strong> Clean, contemporary feel. Works for digital/social. Bold enough for signage.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Color Palette -->
+    <section class="bg-white rounded-2xl shadow-xl p-8 mb-12">
+      <h2 class="text-2xl font-serif-heading text-center mb-6">Brand Color Palette</h2>
+      
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="text-center p-4 rounded-xl">
+          <div class="w-20 h-20 rounded-xl mb-3 flex items-center justify-center bg-heritage-gold">
+            <span class="text-xs font-bold text-primary-900">Gold</span>
+          </div>
+          <div class="font-bold text-primary-900 mb-1">#d4af37</div>
+          <div class="text-xs text-primary-600">Heritage • Achievement • Warmth</div>
+        </div>
+        <div class="text-center p-4 rounded-xl bg-heritage-terracotta text-white">
+          <div class="w-20 h-20 rounded-xl mb-3 flex items-center justify-center">
+            <span class="text-xs font-bold">Terracotta</span>
+          </div>
+          <div class="font-bold mb-1">#cc7357</div>
+          <div class="text-xs opacity-90">Earth • Tradition • Warmth</div>
+        </div>
+        <div class="text-center p-4 rounded-xl">
+          <div class="w-20 h-20 rounded-xl mb-3 flex items-center justify-center bg-inclusive-accent">
+            <span class="text-xs font-bold text-white">Accent</span>
+          </div>
+          <div class="font-bold text-primary-900 mb-1">#4a9da8</div>
+          <div class="text-xs text-primary-600">Trust • Communication • Growth</div>
+        </div>
+        <div class="text-center p-4 rounded-xl">
+          <div class="w-20 h-20 rounded-xl mb-3 flex items-center justify-center bg-inclusive-growth">
+            <span class="text-xs font-bold text-white">Growth</span>
+          </div>
+          <div class="font-bold text-primary-900 mb-1">#6abf69</div>
+          <div class="text-xs text-primary-600">Future • STEM • Hope</div>
+        </div>
+        <div class="text-center p-4 rounded-xl bg-heritage-brown text-white">
+          <div class="w-20 h-20 rounded-xl mb-3 flex items-center justify-center">
+            <span class="text-xs font-bold">Brown</span>
+          </div>
+          <div class="font-bold mb-1">#8b4513</div>
+          <div class="text-xs opacity-90">Stability • Foundation • Earth</div>
+        </div>
+        <div class="text-center p-4 rounded-xl">
+          <div class="w-20 h-20 rounded-xl mb-3 flex items-center justify-center bg-heritage-cream border-2 border-primary-200">
+            <span class="text-xs font-bold text-primary-900">Cream</span>
+          </div>
+          <div class="font-bold text-primary-900 mb-1">#fef8f0</div>
+          <div class="text-xs text-primary-600">Purity • Light • Balance</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Website Style Variations -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-serif-heading text-center mb-8">Website Style Variations</h2>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Traditional Style -->
+        <div class="concept-card bg-white rounded-2xl shadow-lg p-6">
+          <div class="flex items-center mb-4">
+            <div class="w-8 h-8 mr-3">
+              <svg viewBox="0 0 40 40" class="w-full h-full">
+                <rect x="5" y="5" width="30" height="30" rx="3" fill="#d4af37" stroke="#8b4513" stroke-width="1"/>
+                <text x="20" y="28" text-anchor="middle" font-size="18" fill="#8b4513" font-family="serif">H</text>
+              </svg>
+            </div>
+            <h3 class="font-bold text-primary-900">Style 1: Traditional Heritage</h3>
+          </div>
+          <div class="text-xs text-primary-600 mb-3">
+            <p><strong>Typography:</strong> Serif headings (Cormorant Garamond), clean sans (Outfit)</p>
+            <p><strong>Layout:</strong> Structured columns, academic grid system</p>
+            <p><strong>Motion:</strong> Subtle fades, slide-in content</p>
+            <p><strong>Imagery:</strong> Formal school photos, hill panoramas</p>
+          </div>
+          <div class="bg-heritage-cream p-3 rounded">
+            <p class="text-xs text-primary-600"><strong>Rationale:</strong> Respects heritage while remaining accessible. Gold accents highlight important sections. Serif conveys authority. Works for parents and alumni.</p>
+          </div>
+        </div>
+
+        <!-- Modern Inclusive -->
+        <div class="concept-card bg-white rounded-2xl shadow-lg p-6">
+          <div class="flex items-center mb-4">
+            <div class="w-8 h-8 mr-3">
+              <svg viewBox="0 0 40 40" class="w-full h-full">
+                <circle cx="20" cy="20" r="18" fill="none" stroke="#4a9da8" stroke-width="2"/>
+                <path d="M15 22 L25 22" stroke="#4a9da8" stroke-width="2"/>
+                <circle cx="15" cy="22" r="2" fill="#4a9da8"/>
+                <circle cx="25" cy="22" r="2" fill="#4a9da8"/>
+              </svg>
+            </div>
+            <h3 class="font-bold text-primary-900">Style 2: Modern Inclusive</h3>
+          </div>
+          <div class="text-xs text-primary-600 mb-3">
+            <p><strong>Typography:</strong> Bold sans-serif (Outfit), clean hierarchy</p>
+            <p><strong>Layout:</strong> Asymmetric, airy spacing, inclusive imagery</p>
+            <p><strong>Motion:</strong> Smooth transitions, scroll-triggered reveals</p>
+            <p><strong>Imagery:</strong> Students with diverse abilities, collaborative learning</p>
+          </div>
+          <div class="bg-heritage-cream p-3 rounded">
+            <p class="text-xs text-primary-600"><strong>Rationale:</strong> Highlights inclusion mission. Cyan/TEAL signals modern education. Clean layout feels welcoming. Appeals to progressive parents.</p>
+          </div>
+        </div>
+
+        <!-- STEM Future -->
+        <div class="concept-card bg-white rounded-2xl shadow-lg p-6">
+          <div class="flex items-center mb-4">
+            <div class="w-8 h-8 mr-3">
+              <svg viewBox="0 0 40 40" class="w-full h-full">
+                <polygon points="20,5 35,35 5,35" fill="#6abf69" stroke="#d4af37" stroke-width="1"/>
+                <rect x="18" y="20" width="4" height="15" fill="#d4af37"/>
+                <rect x="24" y="22" width="4" height="13" fill="#d4af37"/>
+                <circle cx="20" cy="18" r="4" fill="#6abf69"/>
+              </svg>
+            </div>
+            <h3 class="font-bold text-primary-900">Style 3: STEM Future</h3>
+          </div>
+          <div class="text-xs text-primary-600 mb-3">
+            <p><strong>Typography:</strong> Geometric sans-serif, tech-oriented</p>
+            <p><strong>Layout:</strong> Grid-based, data visualizations</p>
+            <p><strong>Motion:</strong> Micro-interactions, hover animations</p>
+            <p><strong>Imagery:</strong> Robotics, coding, lab work, partnerships</p>
+          </div>
+          <div class="bg-heritage-cream p-3 rounded">
+            <p class="text-xs text-primary-600"><strong>Rationale:</strong> Connects to Imperial College partnership. Green suggests innovation and growth. Modern aesthetic attracts STEM-focused families. Positions school as forward-thinking.</p>
+          </div>
+        </div>
+
+        <!-- Warm Community -->
+        <div class="concept-card bg-white rounded-2xl shadow-lg p-6">
+          <div class="flex items-center mb-4">
+            <div class="w-8 h-8 mr-3">
+              <svg viewBox="0 0 40 40" class="w-full h-full">
+                <path d="M20 30 L10 10 L30 10 Z" fill="#cc7357"/>
+                <circle cx="20" cy="15" r="8" fill="#fef8f0" stroke="#cc7357" stroke-width="1"/>
+                <text x="20" y="18" text-anchor="middle" font-size="10" fill="#8b4513" font-family="serif">HC</text>
+              </svg>
+            </div>
+            <h3 class="font-bold text-primary-900">Style 4: Warm Community</h3>
+          </div>
+          <div class="text-xs text-primary-600 mb-3">
+            <p><strong>Typography:</strong> Friendly sans-serif, rounded elements</p>
+            <p><strong>Layout:</strong> Card-based, conversation-ready</p>
+            <p><strong>Motion:</strong> Gentle animations, bounce effects</p>
+            <p><strong>Imagery:</strong> Smiling students, family moments, school events</p>
+          </div>
+          <div class="bg-heritage-cream p-3 rounded">
+            <p class="text-xs text-primary-600"><strong>Rationale:</strong> Terracotta warmth builds trust. Rounded corners feel approachable. Card layout organizes information clearly. Emphasizes community over institution.</p>
+          </div>
+        </div>
+
+        <!-- Minimalist -->
+        <div class="concept-card bg-white rounded-2xl shadow-lg p-6 md:col-span-2">
+          <div class="flex items-center mb-4">
+            <div class="w-8 h-8 mr-3">
+              <svg viewBox="0 0 40 40" class="w-full h-full">
+                <rect x="10" y="15" width="20" height="10" fill="none" stroke="#422e23" stroke-width="1"/>
+                <polygon points="20,5 5,35 35,35" fill="#d4af37"/>
+              </svg>
+            </div>
+            <h3 class="font-bold text-primary-900">Style 5: Minimalist Heritage</h3>
+          </div>
+          <div class="text-xs text-primary-600 mb-3">
+            <p><strong>Typography:</strong> Single font family, strong hierarchy</p>
+            <p><strong>Layout:</strong> Generous whitespace, focused content</p>
+            <p><strong>Motion:</strong> Subtle only, emphasis on reading</p>
+            <p><strong>Imagery:</strong> High-quality photos, ample negative space</p>
+          </div>
+          <div class="bg-heritage-cream p-3 rounded">
+            <p class="text-xs text-primary-600"><strong>Rationale:</strong> Timeless elegance. Reduces cognitive load. Premium feel without complexity. Works across devices. Gold accents draw attention without overwhelming.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Favicon -->
+    <section class="bg-white rounded-2xl shadow-xl p-8 mb-12">
+      <h2 class="text-2xl font-serif-heading text-center mb-6">Favicon Concepts</h2>
+      
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="text-center p-4">
+          <div class="w-16 h-16 rounded-full bg-heritage-gold flex items-center justify-center mb-3">
+            <svg viewBox="0 0 24 24" class="w-8 h-8 text-primary-900">
+              <polygon points="12,4 6,20 18,20" fill="currentColor"/>
+            </svg>
+          </div>
+          <p class="text-xs text-primary-600">Triangle Hill</p>
+        </div>
+        <div class="text-center p-4">
+          <div class="w-16 h-16 rounded-full bg-inclusive-accent flex items-center justify-center mb-3">
+            <svg viewBox="0 0 24 24" class="w-8 h-8 text-white">
+              <circle cx="12" cy="12" r="10"/>
+              <circle cx="9" cy="12" r="2" fill="white"/>
+              <circle cx="15" cy="12" r="2" fill="white"/>
+            </svg>
+          </div>
+          <p class="text-xs text-primary-600">Unity Circle</p>
+        </div>
+        <div class="text-center p-4">
+          <div class="w-16 h-16 rounded-full border-2 border-heritage-gold bg-white flex items-center justify-center mb-3">
+            <svg viewBox="0 0 24 24" class="w-6 h-6 text-heritage-gold">
+              <path d="M12 2L2 7v10l10 5 10-5V7z"/>
+            </svg>
+          </div>
+          <p class="text-xs text-primary-600">School Badge</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-primary-900 text-primary-50 py-8">
+    <div class="container mx-auto px-6 lg:px-12 text-center">
+      <p class="text-sm text-primary-400">Hillcrest College Brand Creative Brief • Generated with Hillcrest Vision</p>
+    </div>
+  </footer>
+</body>
+</html>

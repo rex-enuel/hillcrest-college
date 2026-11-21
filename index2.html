@@ -1,0 +1,1443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hillcrest College Calabar — Where Every Child Finds Their Place. 40+ years of inclusive excellence on the hilltop.">
+  <title>Hillcrest College Calabar — Where Every Child Finds Their Place</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Outfit:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <style>
+    :root {
+      --heritage-gold: #d4af37;
+      --heritage-cream: #fef8f0;
+      --heritage-terracotta: #cc7357;
+      --heritage-brown: #8b4513;
+      --inclusive-teal: #A8C9C8;
+      --inclusive-teal-dark: #0A3D3C;
+      --coral: #F45B5B;
+      --growth-green: #6abf69;
+      --warm-white: #ffffff;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-color: var(--heritage-cream);
+      color: var(--heritage-brown);
+    }
+
+    .font-display { font-family: 'Lobster', cursive; }
+    .font-serif { font-family: 'Cormorant Garamond', serif; }
+
+    .text-gold { color: var(--heritage-gold); }
+    .text-terracotta { color: var(--heritage-terracotta); }
+    .text-teal { color: var(--inclusive-teal); }
+    .text-teal-dark { color: var(--inclusive-teal-dark); }
+    .text-coral { color: var(--coral); }
+    .text-brown { color: var(--heritage-brown); }
+
+    .bg-gold { background-color: var(--heritage-gold); }
+    .bg-cream { background-color: var(--heritage-cream); }
+    .bg-terracotta { background-color: var(--heritage-terracotta); }
+    .bg-teal { background-color: var(--inclusive-teal); }
+    .bg-teal-dark { background-color: var(--inclusive-teal-dark); }
+    .bg-coral { background-color: var(--coral); }
+    .bg-brown { background-color: var(--heritage-brown); }
+    .bg-growth { background-color: var(--growth-green); }
+
+    .border-gold { border-color: var(--heritage-gold); }
+    .border-terracotta { border-color: var(--heritage-terracotta); }
+    .border-teal { border-color: var(--inclusive-teal); }
+
+    /* Mountain silhouette */
+    .mountain-silhouette {
+      position: relative;
+      height: 120px;
+      overflow: hidden;
+    }
+    .mountain-silhouette svg {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Animation keyframes */
+    @keyframes fade-in-up {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fade-in {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes slide-up {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes mountain-rise {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .animate-fade-in-up {
+      animation: fade-in-up 0.8s ease-out forwards;
+    }
+    .animate-fade-in {
+      animation: fade-in 0.6s ease-out forwards;
+    }
+    .animate-slide-up {
+      animation: slide-up 0.7s ease-out forwards;
+    }
+    .animate-mountain-rise {
+      animation: mountain-rise 1.2s ease-out forwards;
+    }
+
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.2s; }
+    .delay-3 { animation-delay: 0.3s; }
+    .delay-4 { animation-delay: 0.4s; }
+    .delay-5 { animation-delay: 0.5s; }
+    .delay-6 { animation-delay: 0.6s; }
+
+    /* Staggered children */
+    .stagger-children > * { opacity: 0; }
+    .stagger-children.animate-in > * {
+      animation: fade-in-up 0.6s ease-out forwards;
+    }
+    .stagger-children.animate-in > *:nth-child(1) { animation-delay: 0.1s; }
+    .stagger-children.animate-in > *:nth-child(2) { animation-delay: 0.2s; }
+    .stagger-children.animate-in > *:nth-child(3) { animation-delay: 0.3s; }
+    .stagger-children.animate-in > *:nth-child(4) { animation-delay: 0.4s; }
+    .stagger-children.animate-in > *:nth-child(5) { animation-delay: 0.5s; }
+    .stagger-children.animate-in > *:nth-child(6) { animation-delay: 0.6s; }
+
+    /* Hover effects */
+    .card-hover {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+    }
+
+    .btn-primary {
+      background: var(--heritage-gold);
+      color: var(--heritage-brown);
+      font-weight: 600;
+      padding: 1rem 2rem;
+      border-radius: 9999px;
+      transition: all 0.3s ease;
+      border: 2px solid var(--heritage-gold);
+    }
+    .btn-primary:hover {
+      background: transparent;
+      color: var(--heritage-gold);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px -5px rgba(212, 175, 55, 0.4);
+    }
+    .btn-secondary {
+      background: transparent;
+      color: var(--inclusive-teal-dark);
+      font-weight: 600;
+      padding: 1rem 2rem;
+      border-radius: 9999px;
+      border: 2px solid var(--inclusive-teal-dark);
+      transition: all 0.3s ease;
+    }
+    .btn-secondary:hover {
+      background: var(--inclusive-teal-dark);
+      color: white;
+      transform: translateY(-2px);
+    }
+    .btn-terracotta {
+      background: var(--heritage-terracotta);
+      color: white;
+      font-weight: 600;
+      padding: 1rem 2rem;
+      border-radius: 9999px;
+      transition: all 0.3s ease;
+    }
+    .btn-terracotta:hover {
+      background: #b06048;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px -5px rgba(204, 115, 87, 0.4);
+    }
+
+    /* Dropdown menu */
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      min-width: 200px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+      border: 1px solid rgba(0,0,0,0.05);
+      padding: 0.5rem;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.3s ease;
+      z-index: 50;
+    }
+    .dropdown:hover .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    .dropdown-item {
+      display: block;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      color: var(--heritage-brown);
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+    .dropdown-item:hover {
+      background: var(--heritage-cream);
+      color: var(--heritage-gold);
+    }
+
+    /* Focus states for accessibility */
+    a:focus-visible, button:focus-visible {
+      outline: 3px solid var(--heritage-gold);
+      outline-offset: 2px;
+    }
+
+    /* Scrollbar styling */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: var(--heritage-cream); }
+    ::-webkit-scrollbar-thumb { background: var(--inclusive-teal); border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--inclusive-teal-dark); }
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-cream text-brown">
+  <!-- Navigation Header -->
+  <header class="fixed w-full bg-white/95 backdrop-blur-md z-50 border-b border-terracotta/10">
+    <nav class="container mx-auto px-6 lg:px-12" aria-label="Main navigation">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+        <!-- Logo -->
+        <a href="#home" class="flex items-center gap-3" aria-label="Hillcrest College Home">
+          <div class="w-10 h-10 lg:w-12 lg:h-12 flex-shrink-0">
+            <svg viewBox="0 0 60 60" class="w-full h-full" aria-hidden="true">
+              <polygon points="30,8 10,50 50,50" fill="var(--heritage-gold)" stroke="var(--heritage-brown)" stroke-width="2"/>
+              <rect x="26" y="38" width="8" height="14" fill="var(--heritage-brown)"/>
+              <circle cx="16" cy="6" r="5" fill="var(--heritage-gold)"/>
+              <path d="M25 30 L35 30" stroke="var(--growth-green)" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div>
+            <span class="font-display text-xl lg:text-2xl text-brown">Hillcrest</span>
+            <span class="block text-xs text-terracotta font-medium tracking-wide">College Calabar</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden lg:flex lg:items-center lg:gap-8">
+          <a href="#home" class="text-sm font-medium text-brown/70 hover:text-gold transition-colors">Home</a>
+          
+          <!-- About Dropdown -->
+          <div class="dropdown relative">
+            <button class="flex items-center gap-1 text-sm font-medium text-brown/70 hover:text-gold transition-colors" aria-haspopup="true" aria-expanded="false">
+              About
+              <i data-feather="chevron-down" class="w-4 h-4"></i>
+            </button>
+            <div class="dropdown-menu" role="menu">
+              <a href="#our-story" class="dropdown-item" role="menuitem">Our Story</a>
+              <a href="#mission" class="dropdown-item" role="menuitem">Mission & Values</a>
+              <a href="#leadership" class="dropdown-item" role="menuitem">Leadership</a>
+              <a href="#heritage" class="dropdown-item" role="menuitem">40-Year Heritage</a>
+            </div>
+          </div>
+
+          <!-- Academics Dropdown -->
+          <div class="dropdown relative">
+            <button class="flex items-center gap-1 text-sm font-medium text-brown/70 hover:text-gold transition-colors" aria-haspopup="true" aria-expanded="false">
+              Academics
+              <i data-feather="chevron-down" class="w-4 h-4"></i>
+            </button>
+            <div class="dropdown-menu" role="menu">
+              <a href="#curriculum" class="dropdown-item" role="menuitem">Curriculum</a>
+              <a href="#stem" class="dropdown-item" role="menuitem">STEM Partnership</a>
+              <a href="#inclusive" class="dropdown-item" role="menuitem">Inclusive Education</a>
+              <a href="#daily-rhythm" class="dropdown-item" role="menuitem">Daily Rhythm</a>
+            </div>
+          </div>
+
+          <!-- Admissions Dropdown -->
+          <div class="dropdown relative">
+            <button class="flex items-center gap-1 text-sm font-medium text-brown/70 hover:text-gold transition-colors" aria-haspopup="true" aria-expanded="false">
+              Admissions
+              <i data-feather="chevron-down" class="w-4 h-4"></i>
+            </button>
+            <div class="dropdown-menu" role="menu">
+              <a href="#process" class="dropdown-item" role="menuitem">Admission Process</a>
+              <a href="#fees" class="dropdown-item" role="menuitem">Fees & Scholarships</a>
+              <a href="#visit" class="dropdown-item" role="menuitem">Schedule a Visit</a>
+              <a href="#faq" class="dropdown-item" role="menuitem">FAQ</a>
+            </div>
+          </div>
+
+          <a href="#community" class="text-sm font-medium text-brown/70 hover:text-gold transition-colors">Community</a>
+          <a href="#news" class="text-sm font-medium text-brown/70 hover:text-gold transition-colors">News</a>
+
+          <!-- CTA Button -->
+          <a href="#apply" class="btn-primary text-sm hidden sm:inline-flex">
+            Apply Now
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg bg-cream text-brown hover:bg-terracotta/10 transition-colors" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <i data-feather="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="lg:hidden hidden bg-white border-t border-terracotta/10 overflow-hidden" role="navigation">
+        <div class="py-4 px-6 space-y-2">
+          <a href="#home" class="block py-2 text-sm font-medium text-brown/70 hover:text-gold">Home</a>
+          
+          <details class="group">
+            <summary class="flex items-center justify-between py-2 text-sm font-medium text-brown/70 hover:text-gold cursor-pointer list-none">
+              About
+              <i data-feather="chevron-down" class="w-4 h-4 transition-transform group-open:rotate-180"></i>
+            </summary>
+            <div class="pl-4 pt-2 space-y-1 border-l-2 border-gold/30">
+              <a href="#our-story" class="block py-1 text-sm text-brown/60 hover:text-gold">Our Story</a>
+              <a href="#mission" class="block py-1 text-sm text-brown/60 hover:text-gold">Mission & Values</a>
+              <a href="#leadership" class="block py-1 text-sm text-brown/60 hover:text-gold">Leadership</a>
+              <a href="#heritage" class="block py-1 text-sm text-brown/60 hover:text-gold">40-Year Heritage</a>
+            </div>
+          </details>
+
+          <details class="group">
+            <summary class="flex items-center justify-between py-2 text-sm font-medium text-brown/70 hover:text-gold cursor-pointer list-none">
+              Academics
+              <i data-feather="chevron-down" class="w-4 h-4 transition-transform group-open:rotate-180"></i>
+            </summary>
+            <div class="pl-4 pt-2 space-y-1 border-l-2 border-teal/30">
+              <a href="#curriculum" class="block py-1 text-sm text-brown/60 hover:text-teal-dark">Curriculum</a>
+              <a href="#stem" class="block py-1 text-sm text-brown/60 hover:text-teal-dark">STEM Partnership</a>
+              <a href="#inclusive" class="block py-1 text-sm text-brown/60 hover:text-teal-dark">Inclusive Education</a>
+              <a href="#daily-rhythm" class="block py-1 text-sm text-brown/60 hover:text-teal-dark">Daily Rhythm</a>
+            </div>
+          </details>
+
+          <details class="group">
+            <summary class="flex items-center justify-between py-2 text-sm font-medium text-brown/70 hover:text-gold cursor-pointer list-none">
+              Admissions
+              <i data-feather="chevron-down" class="w-4 h-4 transition-transform group-open:rotate-180"></i>
+            </summary>
+            <div class="pl-4 pt-2 space-y-1 border-l-2 border-terracotta/30">
+              <a href="#process" class="block py-1 text-sm text-brown/60 hover:text-terracotta">Admission Process</a>
+              <a href="#fees" class="block py-1 text-sm text-brown/60 hover:text-terracotta">Fees & Scholarships</a>
+              <a href="#visit" class="block py-1 text-sm text-brown/60 hover:text-terracotta">Schedule a Visit</a>
+              <a href="#faq" class="block py-1 text-sm text-brown/60 hover:text-terracotta">FAQ</a>
+            </div>
+          </details>
+
+          <a href="#community" class="block py-2 text-sm font-medium text-brown/70 hover:text-gold">Community</a>
+          <a href="#news" class="block py-2 text-sm font-medium text-brown/70 hover:text-gold">News</a>
+          
+          <div class="pt-4 border-t border-terracotta/10">
+            <a href="#apply" class="btn-primary w-full text-center block text-sm">Apply Now</a>
+            <a href="#portal" class="btn-secondary w-full text-center block text-sm mt-3">Parent Portal</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center pt-16 lg:pt-20 overflow-hidden" aria-labelledby="hero-title">
+      <!-- Mountain Silhouette Background -->
+      <div class="absolute inset-0 -z-10">
+        <div class="mountain-silhouette animate-mountain-rise">
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="mountainGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#A8C9C8" stop-opacity="0.15"/>
+                <stop offset="100%" stop-color="#A8C9C8" stop-opacity="0.05"/>
+              </linearGradient>
+            </defs>
+            <path d="M0,120 L0,80 Q150,20 300,60 T600,50 T900,70 T1200,80 L1200,120 Z" fill="url(#mountainGradient)"/>
+            <path d="M0,120 L0,90 Q200,40 400,70 T800,60 T1200,85 L1200,120 Z" fill="#A8C9C8" opacity="0.1"/>
+            <!-- Sun -->
+            <circle cx="1050" cy="30" r="40" fill="#d4af37" opacity="0.2"/>
+            <circle cx="1050" cy="30" r="25" fill="#d4af37" opacity="0.15"/>
+          </svg>
+        </div>
+        
+        <!-- Floating particles -->
+        <div class="absolute inset-0" aria-hidden="true">
+          <div class="absolute top-1/4 left-1/4 w-2 h-2 bg-gold/20 rounded-full animate-pulse" style="animation-delay: 0s;"></div>
+          <div class="absolute top-1/3 right-1/3 w-1.5 h-1.5 bg-teal/20 rounded-full animate-pulse" style="animation-delay: 1s;"></div>
+          <div class="absolute bottom-1/3 left-1/5 w-1 h-1 bg-terracotta/20 rounded-full animate-pulse" style="animation-delay: 2s;"></div>
+          <div class="absolute bottom-1/4 right-1/4 w-2 h-2 bg-growth/20 rounded-full animate-pulse" style="animation-delay: 3s;"></div>
+        </div>
+      </div>
+
+      <div class="container mx-auto px-6 lg:px-12 py-20 lg:py-32">
+        <div class="max-w-5xl mx-auto text-center">
+          <!-- Badge -->
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold/10 border border-gold/30 text-gold text-sm font-medium mb-6 animate-fade-in-up">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-gold"></span>
+            </span>
+            Established 1983 · Top 7 in Cross River State
+          </div>
+
+          <!-- Main Headline -->
+          <h1 id="hero-title" class="font-display text-5xl lg:text-7xl xl:text-8xl text-teal-dark leading-tight mb-6 animate-fade-in-up delay-1" style="letter-spacing: -0.02em;">
+            Oh Hillcrest College,<br>
+            <span class="font-serif text-gold">Oh Hill...</span>
+          </h1>
+
+          <!-- Sub-headline -->
+          <p class="font-serif text-2xl lg:text-3xl text-brown/60 mb-8 max-w-3xl mx-auto animate-fade-in-up delay-2" style="line-height: 1.4;">
+            Where every child finds their place
+          </p>
+
+          <!-- Description -->
+          <p class="text-lg lg:text-xl text-brown/50 mb-10 max-w-2xl mx-auto animate-fade-in-up delay-3">
+            40+ years of inclusive excellence on the hilltop. From special needs origins to STEM partnerships — a community where heritage meets horizon.
+          </p>
+
+          <!-- CTA Buttons -->
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up delay-4">
+            <a href="#apply" class="btn-primary text-base lg:text-lg px-8 py-4">
+              <span class="flex items-center gap-2">
+                Start Application
+                <i data-feather="arrow-right" class="w-5 h-5 transition-transform group-hover:translate-x-1"></i>
+              </span>
+            </a>
+            <a href="#our-story" class="btn-secondary text-base lg:text-lg px-8 py-4">
+              Our Story
+            </a>
+            <a href="#portal" class="btn-terracotta text-base lg:text-lg px-8 py-4 hidden sm:inline-flex">
+              Parent Portal
+            </a>
+          </div>
+
+          <!-- Trust Indicators -->
+          <div class="mt-16 flex flex-wrap items-center justify-center gap-8 lg:gap-12 animate-fade-in-up delay-5">
+            <div class="text-center">
+              <div class="font-display text-3xl lg:text-4xl text-gold">40+</div>
+              <div class="text-sm text-brown/50">Years of Heritage</div>
+            </div>
+            <div class="w-px h-8 bg-terracotta/20"></div>
+            <div class="text-center">
+              <div class="font-display text-3xl lg:text-4xl text-gold">450+</div>
+              <div class="text-sm text-brown/50">Students Enrolled</div>
+            </div>
+            <div class="w-px h-8 bg-terracotta/20"></div>
+            <div class="text-center">
+              <div class="font-display text-3xl lg:text-4xl text-gold">7</div>
+              <div class="text-sm text-brown/50">Rank in State</div>
+            </div>
+            <div class="w-px h-8 bg-terracotta/20"></div>
+            <div class="text-center">
+              <div class="font-display text-3xl lg:text-4xl text-gold">1</div>
+              <div class="text-sm text-brown/50">Imperial College<br>STEM Partnership</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce" aria-hidden="true">
+        <svg class="w-6 h-6 text-teal/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Our Story / Timeline Section -->
+    <section id="our-story" class="py-20 lg:py-32 bg-white" aria-labelledby="story-title">
+      <div class="container mx-auto px-6 lg:px-12">
+        <div class="max-w-4xl mx-auto text-center mb-16">
+          <span class="inline-block px-4 py-1.5 rounded-full bg-terracotta/10 text-terracotta text-sm font-medium mb-4 animate-fade-in-up">Our Journey</span>
+          <h2 id="story-title" class="font-serif text-4xl lg:text-5xl text-brown mb-4 animate-fade-in-up delay-1">From a Mother's Cry to a Hilltop Beacon</h2>
+          <p class="text-lg text-brown/50 animate-fade-in-up delay-2">Every milestone tells a story of love, inclusion, and unwavering commitment to every child.</p>
+        </div>
+
+        <!-- Timeline -->
+        <div class="relative max-w-3xl mx-auto">
+          <!-- Vertical line -->
+          <div class="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gold/30 -translate-x-1/2" aria-hidden="true"></div>
+
+          <div class="space-y-12 stagger-children" id="timeline">
+            <!-- 1983 -->
+            <div class="relative flex flex-col md:flex-row items-center">
+              <div class="md:w-1/2 md:pr-12 text-right md:text-left order-2 md:order-1">
+                <div class="bg-cream p-6 lg:p-8 rounded-2xl border border-gold/20 card-hover">
+                  <div class="flex items-center gap-2 text-sm font-medium text-gold mb-3">
+                    <span class="w-2 h-2 bg-gold rounded-full"></span>
+                    1983 — The Beginning
+                  </div>
+                  <h3 class="font-serif text-xl lg:text-2xl text-brown mb-3">A Mother's Cry for Help</h3>
+                  <p class="text-brown/60 leading-relaxed">
+                    The story of Hillcrest dates back to a mother's cry for help. A daughter lost to a brain tumour, a son diagnosed with autism. The family home called Hillcrest — named after the man-made hill in front of it — was opened to the public. Mothers were invited to bring their children with special needs alongside their normal brothers and sisters. The response was overwhelming.
+                  </p>
+                </div>
+              </div>
+              <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-5 h-5 bg-gold border-4 border-white rounded-full z-10 shadow-lg" aria-hidden="true"></div>
+              <div class="md:w-1/2 md:pl-12 text-left order-1 md:order-2 mt-4 md:mt-0">
+                <div class="aspect-square max-w-xs mx-auto md:mx-0">
+                  <svg viewBox="0 0 300 300" class="w-full h-full" aria-hidden="true">
+                    <circle cx="150" cy="150" r="130" fill="none" stroke="#d4af37" stroke-width="3" stroke-dasharray="816" stroke-dashoffset="816">
+                      <animate attributeName="stroke-dashoffset" from="816" to="0" dur="2s" fill="freeze" begin="0.5s"/>
+                    </circle>
+                    <text x="150" y="140" text-anchor="middle" font-family="Georgia, serif" font-size="48" fill="#8b4513" font-weight="bold">1983</text>
+                    <text x="150" y="190" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#cc7357">Origin</text>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- 1998 -->
+            <div class="relative flex flex-col md:flex-row items-center">
+              <div class="md:w-1/2 md:pr-12 text-right md:text-left order-2 md:order-1">
+                <div class="bg-cream p-6 lg:p-8 rounded-2xl border border-teal/20 card-hover">
+                  <div class="flex items-center gap-2 text-sm font-medium text-teal-dark mb-3">
+                    <span class="w-2 h-2 bg-teal rounded-full"></span>
+                    1998 — Secondary Arm Born
+                  </div>
+                  <h3 class="font-serif text-xl lg:text-2xl text-brown mb-3">Growth & Expansion</h3>
+                  <p class="text-brown/60 leading-relaxed">
+                    The birth of the secondary arm marked Hillcrest's evolution from a special needs school to a comprehensive educational institution. The inclusive philosophy remained at the core — every child, regardless of ability, learning together in the same classrooms, the same assemblies, the same community.
+                  </p>
+                </div>
+              </div>
+              <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-5 h-5 bg-teal border-4 border-white rounded-full z-10 shadow-lg" aria-hidden="true"></div>
+              <div class="md:w-1/2 md:pl-12 text-left order-1 md:order-2 mt-4 md:mt-0">
+                <div class="aspect-square max-w-xs mx-auto md:mx-0">
+                  <svg viewBox="0 0 300 300" class="w-full h-full" aria-hidden="true">
+                    <circle cx="150" cy="150" r="130" fill="none" stroke="#A8C9C8" stroke-width="3" stroke-dasharray="816" stroke-dashoffset="816">
+                      <animate attributeName="stroke-dashoffset" from="816" to="0" dur="2s" fill="freeze" begin="1s"/>
+                    </circle>
+                    <text x="150" y="140" text-anchor="middle" font-family="Georgia, serif" font-size="48" fill="#0A3D3C" font-weight="bold">1998</text>
+                    <text x="150" y="190" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#A8C9C8">Growth</text>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2013 -->
+            <div class="relative flex flex-col md:flex-row items-center">
+              <div class="md:w-1/2 md:pr-12 text-right md:text-left order-2 md:order-1">
+                <div class="bg-cream p-6 lg:p-8 rounded-2xl border border-terracotta/20 card-hover">
+                  <div class="flex items-center gap-2 text-sm font-medium text-terracotta mb-3">
+                    <span class="w-2 h-2 bg-terracotta rounded-full"></span>
+                    2013 — The Hilltop Move
+                  </div>
+                  <h3 class="font-serif text-xl lg:text-2xl text-brown mb-3">Renamed Hillcrest College Calabar</h3>
+                  <p class="text-brown/60 leading-relaxed">
+                    The move to the permanent hilltop site on Lemna Road, Ikot Effanga Mkpa. Built majestically on a hill, the campus offers a serene, natural learning environment with 360° views. The original farmhouse was converted to administration offices. Multiple classroom blocks crown the hill — a physical manifestation of reaching new heights.
+                  </p>
+                </div>
+              </div>
+              <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-5 h-5 bg-terracotta border-4 border-white rounded-full z-10 shadow-lg" aria-hidden="true"></div>
+              <div class="md:w-1/2 md:pl-12 text-left order-1 md:order-2 mt-4 md:mt-0">
+                <div class="aspect-square max-w-xs mx-auto md:mx-0">
+                  <svg viewBox="0 0 300 300" class="w-full h-full" aria-hidden="true">
+                    <circle cx="150" cy="150" r="130" fill="none" stroke="#cc7357" stroke-width="3" stroke-dasharray="816" stroke-dashoffset="816">
+                      <animate attributeName="stroke-dashoffset" from="816" to="0" dur="2s" fill="freeze" begin="1.5s"/>
+                    </circle>
+                    <text x="150" y="140" text-anchor="middle" font-family="Georgia, serif" font-size="48" fill="#8b4513" font-weight="bold">2013</text>
+                    <text x="150" y="190" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#cc7357">Hilltop</text>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2024 -->
+            <div class="relative flex flex-col md:flex-row items-center">
+              <div class="md:w-1/2 md:pr-12 text-right md:text-left order-2 md:order-1">
+                <div class="bg-cream p-6 lg:p-8 rounded-2xl border border-growth/20 card-hover">
+                  <div class="flex items-center gap-2 text-sm font-medium text-growth mb-3">
+                    <span class="w-2 h-2 bg-growth rounded-full"></span>
+                    2024 — STEM Future
+                  </div>
+                  <h3 class="font-serif text-xl lg:text-2xl text-brown mb-3">Imperial College London Partnership</h3>
+                  <p class="text-brown/60 leading-relaxed">
+                    July 2024: STEM outreach collaboration with Imperial College London. 35 attendees at workshops targeting girls for coding and renewable energy. This partnership represents Hillcrest's commitment to preparing students for a global future while staying rooted in the inclusive values that began on this hill four decades ago.
+                  </p>
+                </div>
+              </div>
+              <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-5 h-5 bg-growth border-4 border-white rounded-full z-10 shadow-lg" aria-hidden="true"></div>
+              <div class="md:w-1/2 md:pl-12 text-left order-1 md:order-2 mt-4 md:mt-0">
+                <div class="aspect-square max-w-xs mx-auto md:mx-0">
+                  <svg viewBox="0 0 300 300" class="w-full h-full" aria-hidden="true">
+                    <circle cx="150" cy="150" r="130" fill="none" stroke="#6abf69" stroke-width="3" stroke-dasharray="816" stroke-dashoffset="816">
+                      <animate attributeName="stroke-dashoffset" from="816" to="0" dur="2s" fill="freeze" begin="2s"/>
+                    </circle>
+                    <text x="150" y="140" text-anchor="middle" font-family="Georgia, serif" font-size="48" fill="#2d6b2f" font-weight="bold">2024</text>
+                    <text x="150" y="190" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#6abf69">Future</text>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values / Belonging Section -->
+    <section id="mission" class="py-20 lg:py-32 bg-cream" aria-labelledby="values-title">
+      <div class="container mx-auto px-6 lg:px-12">
+        <div class="max-w-4xl mx-auto text-center mb-16">
+          <span class="inline-block px-4 py-1.5 rounded-full bg-gold/10 text-gold text-sm font-medium mb-4 animate-fade-in-up">Our Philosophy</span>
+          <h2 id="values-title" class="font-serif text-4xl lg:text-5xl text-brown mb-4 animate-fade-in-up delay-1">Belonging Is Our Foundation</h2>
+          <p class="text-lg text-brown/50 animate-fade-in-up delay-2">Inclusion, cooperation, mutual respect, awareness, and self-confidence — these aren't just words. They're the daily rhythm of life on the hill.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 stagger-children" id="values-grid">
+          <!-- Value 1 -->
+          <article class="bg-white p-6 lg:p-8 rounded-2xl border border-gold/20 card-hover group">
+            <div class="w-14 h-14 rounded-xl bg-gold/10 flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
+              <i data-feather="users" class="w-7 h-7 text-gold"></i>
+            </div>
+            <h3 class="font-serif text-xl text-brown mb-3">Inclusive Community</h3>
+            <p class="text-brown/60 leading-relaxed">Special needs students learn alongside their peers. No separate wings, no separate assemblies. One community, one hill, every child valued.</p>
+          </article>
+
+          <!-- Value 2 -->
+          <article class="bg-white p-6 lg:p-8 rounded-2xl border border-teal/20 card-hover group">
+            <div class="w-14 h-14 rounded-xl bg-teal/10 flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
+              <i data-feather="book-open" class="w-7 h-7 text-teal-dark"></i>
+            </div>
+            <h3 class="font-serif text-xl text-brown mb-3">Academic Excellence</h3>
+            <p class="text-brown/60 leading-relaxed">National curriculum with WASSCE, GCE, NECO preparation. Honors roll recognition. Top 7 ranking in Cross River State.</p>
+          </article>
+
+          <!-- Value 3 -->
+          <article class="bg-white p-6 lg:p-8 rounded-2xl border border-terracotta/20 card-hover group">
+            <div class="w-14 h-14 rounded-xl bg-terracotta/10 flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
+              <i data-feather="sunrise" class="w-7 h-7 text-terracotta"></i>
+            </div>
+            <h3 class="font-serif text-xl text-brown mb-3">Daily Discipline</h3>
+            <p class="text-brown/60 leading-relaxed">Assembly at 9:50 AM sharp. Monday Heads, Tuesday Chapel, Wednesday Hymns, Thursday Principal, Friday Life Skills. Structure that builds character.</p>
+          </article>
+
+          <!-- Value 4 -->
+          <article class="bg-white p-6 lg:p-8 rounded-2xl border border-growth/20 card-hover group">
+            <div class="w-14 h-14 rounded-xl bg-growth/10 flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
+              <i data-feather="zap" class="w-7 h-7 text-growth"></i>
+            </div>
+            <h3 class="font-serif text-xl text-brown mb-3">STEM Future</h3>
+            <p class="text-brown/60 leading-relaxed">Imperial College London partnership. Coding workshops, renewable energy labs, university mentorship. Where heritage meets tomorrow.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hilltop Location Section -->
+    <section id="location" class="py-20 lg:py-32 bg-white relative overflow-hidden" aria-labelledby="location-title">
+      <div class="container mx-auto px-6 lg:px-12">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <!-- Content -->
+          <div class="stagger-children">
+            <span class="inline-block px-4 py-1.5 rounded-full bg-gold/10 text-gold text-sm font-medium mb-4 animate-fade-in-up">Our Campus</span>
+            <h2 id="location-title" class="font-serif text-4xl lg:text-5xl text-brown mb-4 animate-fade-in-up delay-1">Majestically on a Hill</h2>
+            <p class="text-lg text-brown/60 mb-6 animate-fade-in-up delay-2 leading-relaxed">
+              Hillcrest College sits atop a distinctive hill in Calabar, Cross River State. This isn't just a location — it's a perspective. From 5.032547°N, 8.369181°E, our students see further, dream bigger, and breathe easier.
+            </p>
+            <div class="grid sm:grid-cols-2 gap-4 animate-fade-in-up delay-3">
+              <div class="bg-cream p-5 rounded-xl border border-gold/20">
+                <div class="flex items-center gap-3 mb-2">
+                  <div class="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center">
+                    <i data-feather="mountain" class="w-5 h-5 text-gold"></i>
+                  </div>
+                  <div>
+                    <div class="font-semibold text-brown">Hilltop Campus</div>
+                    <div class="text-sm text-brown/50">Serene, natural environment</div>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-cream p-5 rounded-xl border border-teal/20">
+                <div class="flex items-center gap-3 mb-2">
+                  <div class="w-10 h-10 rounded-lg bg-teal/10 flex items-center justify-center">
+                    <i data-feather="compass" class="w-5 h-5 text-teal-dark"></i>
+                  </div>
+                  <div>
+                    <div class="font-semibold text-brown">GPS: 5.0325, 8.3692</div>
+                    <div class="text-sm text-brown/50">Lemna Road, Ikot Effanga Mkpa</div>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-cream p-5 rounded-xl border border-terracotta/20">
+                <div class="flex items-center gap-3 mb-2">
+                  <div class="w-10 h-10 rounded-lg bg-terracotta/10 flex items-center justify-center">
+                    <i data-feather="home" class="w-5 h-5 text-terracotta"></i>
+                  </div>
+                  <div>
+                    <div class="font-semibold text-brown">Original Farmhouse</div>
+                    <div class="text-sm text-brown/50">Now administration offices</div>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-cream p-5 rounded-xl border border-growth/20">
+                <div class="flex items-center gap-3 mb-2">
+                  <div class="w-10 h-10 rounded-lg bg-growth/10 flex items-center justify-center">
+                    <i data-feather="tree-pine" class="w-5 h-5 text-growth"></i>
+                  </div>
+                  <div>
+                    <div class="font-semibold text-brown">360° Views</div>
+                    <div class="text-sm text-brown/50">Multiple classroom blocks</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="#visit" class="inline-flex items-center gap-2 mt-6 text-terracotta font-semibold hover:text-terracotta/80 transition-colors animate-fade-in-up delay-4">
+              Schedule a Campus Tour
+              <i data-feather="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+
+          <!-- Visual: Hill Illustration -->
+          <div class="relative animate-fade-in-up delay-2" aria-hidden="true">
+            <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-b from-teal/5 via-cream to-terracotta/5 relative">
+              <!-- SVG Hill Illustration -->
+              <svg viewBox="0 0 600 450" class="w-full h-full" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                  <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="#e8f4f8"/>
+                    <stop offset="100%" stop-color="#fef8f0"/>
+                  </linearGradient>
+                  <linearGradient id="hillGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="#A8C9C8"/>
+                    <stop offset="100%" stop-color="#8ab8b7"/>
+                  </linearGradient>
+                  <linearGradient id="hillGradient2" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="#90b8b7"/>
+                    <stop offset="100%" stop-color="#7aa8a7"/>
+                  </linearGradient>
+                </defs>
+                <!-- Sky -->
+                <rect width="600" height="450" fill="url(#skyGradient)"/>
+                <!-- Sun -->
+                <circle cx="520" cy="60" r="50" fill="#d4af37" opacity="0.2"/>
+                <circle cx="520" cy="60" r="30" fill="#d4af37" opacity="0.15"/>
+                <!-- Distant hills -->
+                <path d="M0,320 Q150,280 300,300 T600,290 L600,450 L0,450 Z" fill="#A8C9C8" opacity="0.15"/>
+                <!-- Main hill -->
+                <path d="M-50,450 Q150,150 300,100 Q450,50 600,80 L650,450 L-50,450 Z" fill="url(#hillGradient)"/>
+                <path d="M-50,450 Q200,180 300,130 Q400,80 550,120 L600,450 L-50,450 Z" fill="url(#hillGradient2)" opacity="0.6"/>
+                <!-- Building blocks on hill -->
+                <g fill="#8b4513" opacity="0.8">
+                  <rect x="180" y="160" width="80" height="50" rx="2"/>
+                  <rect x="185" y="140" width="10" height="20" fill="#d4af37"/>
+                  <rect x="340" y="180" width="100" height="60" rx="2"/>
+                  <rect x="350" y="155" width="15" height="25" fill="#d4af37"/>
+                  <rect x="400" y="155" width="15" height="25" fill="#d4af37"/>
+                  <rect x="120" y="220" width="60" height="40" rx="2"/>
+                  <rect x="450" y="200" width="70" height="45" rx="2"/>
+                </g>
+                <!-- Path winding up -->
+                <path d="M300,450 Q280,350 300,250 Q320,180 300,120" fill="none" stroke="#cc7357" stroke-width="3" opacity="0.6" stroke-linecap="round"/>
+                <!-- Trees -->
+                <g fill="#2d6b2f" opacity="0.7">
+                  <circle cx="100" cy="380" r="25"/>
+                  <circle cx="115" cy="370" r="20"/>
+                  <circle cx="85" cy="370" r="20"/>
+                  <rect x="105" y="400" width="10" height="30" fill="#8b4513"/>
+                  <circle cx="500" cy="390" r="30"/>
+                  <circle cx="520" cy="375" r="25"/>
+                  <circle cx="480" cy="375" r="25"/>
+                  <rect x="505" y="410" width="12" height="35" fill="#8b4513"/>
+                </g>
+                <!-- Birds -->
+                <g stroke="#8b4513" stroke-width="1.5" fill="none" opacity="0.5">
+                  <path d="M100,100 Q110,90 120,100 Q130,110 140,100"/>
+                  <path d="M150,120 Q160,110 170,120 Q180,130 190,120"/>
+                  <path d="M450,80 Q460,70 470,80 Q480,90 490,80"/>
+                </g>
+              </svg>
+              <!-- Floating label -->
+              <div class="absolute bottom-6 left-6 bg-white/95 backdrop-blur px-4 py-3 rounded-xl shadow-lg border border-gold/20">
+                <div class="font-semibold text-brown text-sm">Hillcrest College Calabar</div>
+                <div class="text-xs text-brown/50">Lemna Road, Ikot Effanga Mkpa</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STEM Partnership Section -->
+    <section id="stem" class="py-20 lg:py-32 bg-gradient-to-br from-teal/5 via-cream to-growth/5" aria-labelledby="stem-title">
+      <div class="container mx-auto px-6 lg:px-12">
+        <div class="max-w-5xl mx-auto">
+          <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <!-- Visual -->
+            <div class="relative stagger-children" aria-hidden="true">
+              <div class="aspect-square rounded-2xl overflow-hidden bg-white shadow-2xl border border-teal/20 relative">
+                <div class="absolute inset-0 bg-gradient-to-br from-teal/10 to-growth/10"/>
+                <svg viewBox="0 0 400 400" class="w-full h-full p-8" preserveAspectRatio="xMidYMid meet">
+                  <defs>
+                    <linearGradient id="circuitGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#A8C9C8"/>
+                      <stop offset="100%" stop-color="#6abf69"/>
+                    </linearGradient>
+                  </defs>
+                  <!-- Circuit pattern background -->
+                  <g stroke="url(#circuitGradient)" stroke-width="1.5" fill="none" opacity="0.3">
+                    <rect x="50" y="50" width="300" height="300" rx="20"/>
+                    <line x1="50" y1="200" x2="350" y2="200"/>
+                    <line x1="200" y1="50" x2="200" y2="350"/>
+                    <circle cx="200" cy="200" r="80"/>
+                    <circle cx="200" cy="200" r="120"/>
+                  </g>
+                  <!-- Central icon -->
+                  <g transform="translate(200, 200)">
+                    <circle r="60" fill="url(#circuitGradient)" opacity="0.2"/>
+                    <circle r="40" fill="none" stroke="url(#circuitGradient)" stroke-width="3"/>
+                    <path d="M0,-30 L0,30 M-30,0 L30,0" stroke="url(#circuitGradient)" stroke-width="3" stroke-linecap="round"/>
+                    <circle r="15" fill="url(#circuitGradient)"/>
+                    <!-- Nodes around -->
+                    <g fill="url(#circuitGradient)">
+                      <circle cx="60" cy="-60" r="8"/>
+                      <circle cx="-60" cy="-60" r="8"/>
+                      <circle cx="60" cy="60" r="8"/>
+                      <circle cx="-60" cy="60" r="8"/>
+                    </g>
+                    <!-- Connecting lines -->
+                    <g stroke="url(#circuitGradient)" stroke-width="2" stroke-linecap="round">
+                      <line x1="0" y1="-40" x2="0" y2="-60"/>
+                      <line x1="0" y1="40" x2="0" y2="60"/>
+                      <line x1="-40" y1="0" x2="-60" y2="0"/>
+                      <line x1="40" y1="0" x2="60" y2="0"/>
+                    </g>
+                  </g>
+                </svg>
+                <!-- Badge overlay -->
+                <div class="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur p-4 rounded-xl shadow-lg border border-teal/20">
+                  <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 rounded-xl bg-teal/10 flex items-center justify-center">
+                      <svg class="w-6 h-6 text-teal-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <div class="font-semibold text-brown">Imperial College London</div>
+                      <div class="text-sm text-brown/50">STEM Partnership Since 2024</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Floating elements -->
+              <div class="absolute -top-4 -right-4 w-24 h-24 bg-gold/20 rounded-full blur-2xl" aria-hidden="true"></div>
+              <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-growth/20 rounded-full blur-2xl" aria-hidden="true"></div>
+            </div>
+
+            <!-- Content -->
+            <div class="stagger-children">
+              <span class="inline-block px-4 py-1.5 rounded-full bg-growth/10 text-growth text-sm font-medium mb-4 animate-fade-in-up">Innovation</span>
+              <h2 id="stem-title" class="font-serif text-4xl lg:text-5xl text-brown mb-4 animate-fade-in-up delay-1">Where Heritage Meets Tomorrow</h2>
+              <p class="text-lg text-brown/60 mb-6 animate-fade-in-up delay-2 leading-relaxed">
+                In July 2024, Hillcrest College partnered with Imperial College London for a groundbreaking STEM outreach program. This collaboration brings world-class university mentorship, cutting-edge coding workshops, and renewable energy labs to our hilltop campus.
+              </p>
+              <div class="grid sm:grid-cols-2 gap-4 mb-8 animate-fade-in-up delay-3">
+                <div class="bg-white p-5 rounded-xl border border-growth/20 flex items-center gap-4">
+                  <div class="w-12 h-12 rounded-xl bg-growth/10 flex items-center justify-center flex-shrink-0">
+                    <i data-feather="code" class="w-6 h-6 text-growth"></i>
+                  </div>
+                  <div>
+                    <div class="font-semibold text-brown">Coding Workshops</div>
+                    <div class="text-sm text-brown/50">Girls-focused programming sessions</div>
+                  </div>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-teal/20 flex items-center gap-4">
+                  <div class="w-12 h-12 rounded-xl bg-teal/10 flex items-center justify-center flex-shrink-0">
+                    <i data-feather="cpu" class="w-6 h-6 text-teal-dark"></i>
+                  </div>
+                  <div>
+                    <div class="font-semibold text-brown">Renewable Energy Labs</div>
+                    <div class="text-sm text-brown/50">Hands-on sustainability projects</div>
+                  </div>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-gold/20 flex items-center gap-4">
+                  <div class="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center flex-shrink-0">
+                    <i data-feather="graduation-cap" class="w-6 h-6 text-gold"></i>
+                  </div>
+                  <div>
+                    <div class="font-semibold text-brown">University Mentorship</div>
+                    <div class="text-sm text-brown/50">Imperial student mentors</div>
+                  </div>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-terracotta/20 flex items-center gap-4">
+                  <div class="w-12 h-12 rounded-xl bg-terracotta/10 flex items-center justify-center flex-shrink-0">
+                    <i data-feather="target" class="w-6 h-6 text-terracotta"></i>
+                  </div>
+                  <div>
+                    <div class="font-semibold text-brown">35+ Attendees</div>
+                    <div class="text-sm text-brown/50">First cohort July 2024</div>
+                  </div>
+                </div>
+              </div>
+              <a href="#stem-details" class="inline-flex items-center gap-2 text-teal-dark font-semibold hover:text-teal transition-colors animate-fade-in-up delay-4">
+                Learn About Our STEM Program
+                <i data-feather="arrow-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Daily Rhythm Section -->
+    <section id="daily-rhythm" class="py-20 lg:py-32 bg-white" aria-labelledby="rhythm-title">
+      <div class="container mx-auto px-6 lg:px-12">
+        <div class="max-w-4xl mx-auto text-center mb-16">
+          <span class="inline-block px-4 py-1.5 rounded-full bg-terracotta/10 text-terracotta text-sm font-medium mb-4 animate-fade-in-up">Daily Life</span>
+          <h2 id="rhythm-title" class="font-serif text-4xl lg:text-5xl text-brown mb-4 animate-fade-in-up delay-1">The Rhythm of the Hill</h2>
+          <p class="text-lg text-brown/50 animate-fade-in-up delay-2">Discipline isn't restriction — it's the structure that lets excellence grow.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-4 stagger-children" id="rhythm-grid">
+          <article class="bg-cream p-6 rounded-2xl border border-terracotta/20 text-center card-hover group">
+            <div class="w-16 h-16 mx-auto mb-4 rounded-xl bg-terracotta/10 flex items-center justify-center group-hover:scale-105 transition-transform">
+              <i data-feather="sunrise" class="w-8 h-8 text-terracotta"></i>
+            </div>
+            <div class="font-display text-2xl text-terracotta mb-1">MONDAY</div>
+            <div class="font-semibold text-brown mb-2">9:50 AM</div>
+            <div class="text-sm text-brown/60">Head's Assembly</div>
+          </article>
+
+          <article class="bg-cream p-6 rounded-2xl border border-gold/20 text-center card-hover group">
+            <div class="w-16 h-16 mx-auto mb-4 rounded-xl bg-gold/10 flex items-center justify-center group-hover:scale-105 transition-transform">
+              <i data-feather="heart" class="w-8 h-8 text-gold"></i>
+            </div>
+            <div class="font-display text-2xl text-gold mb-1">TUESDAY</div>
+            <div class="font-semibold text-brown mb-2">9:50 AM</div>
+            <div class="text-sm text-brown/60">Chapel Service</div>
+          </article>
+
+          <article class="bg-cream p-6 rounded-2xl border border-teal/20 text-center card-hover group">
+            <div class="w-16 h-16 mx-auto mb-4 rounded-xl bg-teal/10 flex items-center justify-center group-hover:scale-105 transition-transform">
+              <i data-feather="music" class="w-8 h-8 text-teal-dark"></i>
+            </div>
+            <div class="font-display text-2xl text-teal-dark mb-1">WEDNESDAY</div>
+            <div class="font-semibold text-brown mb-2">9:50 AM</div>
+            <div class="text-sm text-brown/60">Tutor Period + Hymn Singing</div>
+          </article>
+
+          <article class="bg-cream p-6 rounded-2xl border border-growth/20 text-center card-hover group">
+            <div class="w-16 h-16 mx-auto mb-4 rounded-xl bg-growth/10 flex items-center justify-center group-hover:scale-105 transition-transform">
+              <i data-feather="user-check" class="w-8 h-8 text-growth"></i>
+            </div>
+            <div class="font-display text-2xl text-growth mb-1">THURSDAY</div>
+            <div class="font-semibold text-brown mb-2">9:50 AM</div>
+            <div class="text-sm text-brown/60">Principal's Assembly</div>
+          </article>
+
+          <article class="bg-cream p-6 rounded-2xl border border-brown/20 text-center card-hover group">
+            <div class="w-16 h-16 mx-auto mb-4 rounded-xl bg-brown/10 flex items-center justify-center group-hover:scale-105 transition-transform">
+              <i data-feather="book" class="w-8 h-8 text-brown"></i>
+            </div>
+            <div class="font-display text-2xl text-brown mb-1">FRIDAY</div>
+            <div class="font-semibold text-brown mb-2">9:50 AM</div>
+            <div class="text-sm text-brown/60">Life Skills Period</div>
+          </article>
+        </div>
+
+        <!-- Additional info -->
+        <div class="mt-12 grid md:grid-cols-3 gap-6 stagger-children">
+          <div class="bg-teal/5 p-6 rounded-2xl border border-teal/20">
+            <h3 class="font-serif text-xl text-teal-dark mb-3 flex items-center gap-2">
+              <i data-feather="shield" class="w-5 h-5"></i>
+              Pastoral Care
+            </h3>
+            <p class="text-brown/60">Every student has a tutor. Weekly check-ins. House system builds cross-year bonds.</p>
+          </div>
+          <div class="bg-gold/5 p-6 rounded-2xl border border-gold/20">
+            <h3 class="font-serif text-xl text-brown mb-3 flex items-center gap-2">
+              <i data-feather="award" class="w-5 h-5 text-gold"></i>
+              Honors Recognition
+            </h3>
+            <p class="text-brown/60">Termly honors roll. Academic excellence celebrated publicly. Culture of achievement.</p>
+          </div>
+          <div class="bg-growth/5 p-6 rounded-2xl border border-growth/20">
+            <h3 class="font-serif text-xl text-growth mb-3 flex items-center gap-2">
+              <i data-feather="users" class="w-5 h-5"></i>
+              Co-Curricular
+            </h3>
+            <p class="text-brown/60">Sports, music, debate, STEM clubs. Every child finds their passion beyond the classroom.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community / Testimonials Section -->
+    <section id="community" class="py-20 lg:py-32 bg-cream" aria-labelledby="community-title">
+      <div class="container mx-auto px-6 lg:px-12">
+        <div class="max-w-4xl mx-auto text-center mb-16">
+          <span class="inline-block px-4 py-1.5 rounded-full bg-gold/10 text-gold text-sm font-medium mb-4 animate-fade-in-up">Voices</span>
+          <h2 id="community-title" class="font-serif text-4xl lg:text-5xl text-brown mb-4 animate-fade-in-up delay-1">Our Community Speaks</h2>
+          <p class="text-lg text-brown/50 animate-fade-in-up delay-2">Real voices from the hill. Parents, alumni, and students share their Hillcrest story.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 stagger-children" id="testimonials">
+          <!-- Testimonial 1 -->
+          <article class="bg-white p-8 rounded-2xl border border-gold/20 card-hover relative">
+            <div class="absolute top-6 right-6 text-gold/20">
+              <i data-feather="message-square" class="w-12 h-12"></i>
+            </div>
+            <div class="flex items-center gap-2 text-gold mb-4" aria-label="5 out of 5 stars">
+              <i data-feather="star" class="w-5 h-5 fill-current"></i>
+              <i data-feather="star" class="w-5 h-5 fill-current"></i>
+              <i data-feather="star" class="w-5 h-5 fill-current"></i>
+              <i data-feather="star" class="w-5 h-5 fill-current"></i>
+              <i data-feather="star" class="w-5 h-5 fill-current"></i>
+            </div>
+            <p class="text-brown/70 leading-relaxed mb-6">"My son has special needs. At other schools, he was isolated. At Hillcrest, he's just another student in the assembly, another voice in the hymn. The inclusion isn't a program — it's the culture."</p>
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center text-gold font-bold text-lg">A</div>
+              <div>
+                <div class="font-semibold text-brown">Mrs. Adebayo</div>
+                <div class="text-sm text-brown/50">Parent, Class of 2026</div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Testimonial 2 -->
+          <article class="bg-white p-8 rounded-2xl border border-teal/20 card-hover relative">
+            <div class="absolute top-6 right-6 text-teal/20">
+              <i data-feather="message-square" class="w-12 h-12"></i>
+            </div>
+            <div class="flex items-center gap-2 text-gold mb-4" aria-label="5 out of 5 stars">
+              <i data-feather="star" class="w-5 h-5 fill-current"></i>
+              <i data-feather="star" class="w-5 h-5 fill-current"></i>
+              <i data-feather="star" class="w-5 h-5 fill-current"></i>
+              <i data-feather="star" class="w-5 h-5 fill-current"></i>
+              <i data-feather="star" class="w-5 h-5 fill-current"></i>
+            </div>
+            <p class="text-brown/70 leading-relaxed mb-6">"The Imperial College partnership changed everything for me. I never imagined coding with university mentors while still in secondary school. Now I'm applying for computer science at top universities."</p>
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-teal/20 flex items-center justify-center text-teal-dark font-bold text-lg">C</div>
+              <div>
+                <div class="font-semibold text-brown">Chidi Okafor</div>
+                <div class="text-sm text-brown/50">Student, Year 12</div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Testimonial 3 -->
+          <article class="bg-white p-8 rounded-2xl border border-terracotta/20 card-hover relative">
+            <div class="absolute top-6 right-6 text-terracotta/20">
+              <i data-feather="message-square" class="w-12 h-12"></i>
+            </div>
+            <div class="flex items-center gap-2 text-gold mb-4" aria-label="5 out of 5 stars">
+              <i data-feather="star" class="w-5 h-5 fill-current"></i>
+              <i data-feather="star" class="w-5 h-5 fill-current"></i>
+              <i data-feather="star" class="w-5 h-5 fill-current"></i>
+              <i data-feather="star" class="w-5 h-5 fill-current"></i>
+              <i data-feather="star" class="w-5 h-5 fill-current"></i>
+            </div>
+            <p class="text-brown/70 leading-relaxed mb-6">"I graduated in 2005. The discipline, the hilltop assemblies, the friends — they shaped who I am. Now my daughter walks the same path. That's the Hillcrest legacy: generational."</p>
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-terracotta/20 flex items-center justify-center text-terracotta font-bold text-lg">E</div>
+              <div>
+                <div class="font-semibold text-brown">Dr. Emeka Nwosu</div>
+                <div class="text-sm text-brown/50">Alumnus, Class of 2005</div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="text-center mt-12 animate-fade-in-up">
+          <a href="#testimonials-all" class="btn-secondary">Read All Stories</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Admissions CTA Section -->
+    <section id="apply" class="py-20 lg:py-32 relative overflow-hidden" aria-labelledby="apply-title">
+      <div class="absolute inset-0 bg-gradient-to-br from-teal-dark via-brown to-terracotta" aria-hidden="true"></div>
+      <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ccircle cx=%2220%22 cy=%2220%22 r=%221%22 fill=%22%23fff%22 opacity=%220.05%22/%3E%3Ccircle cx=%2280%22 cy=%2240%22 r=%221.5%22 fill=%22%23fff%22 opacity=%220.05%22/%3E%3Ccircle cx=%2240%22 cy=%2280%22 r=%221%22 fill=%22%23fff%22 opacity=%220.05%22/%3E%3C/svg%3E')]" aria-hidden="true"></div>
+      
+      <div class="container mx-auto px-6 lg:px-12 relative z-10">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 id="apply-title" class="font-display text-4xl lg:text-5xl xl:text-6xl text-white mb-6 animate-fade-in-up">Ready to Join the Hill?</h2>
+          <p class="text-xl text-white/80 mb-10 animate-fade-in-up delay-1">
+            Applications for the 2025/2026 academic year are now open. Limited spaces available.
+          </p>
+          
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up delay-2">
+            <a href="#application-form" class="btn-primary text-lg px-10 py-4 bg-white text-brown border-white hover:bg-transparent hover:text-white">
+              Start Application
+            </a>
+            <a href="#visit" class="btn-secondary text-lg px-10 py-4 border-white text-white hover:bg-white hover:text-brown">
+              Schedule a Visit
+            </a>
+          </div>
+
+          <!-- Quick stats -->
+          <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 animate-fade-in-up delay-3">
+            <div class="text-center">
+              <div class="font-display text-4xl text-gold">3</div>
+              <div class="text-white/70 text-sm">Step Process</div>
+            </div>
+            <div class="text-center">
+              <div class="font-display text-4xl text-gold">2</div>
+              <div class="text-white/70 text-sm">Weeks Response</div>
+            </div>
+            <div class="text-center">
+              <div class="font-display text-4xl text-gold">100</div>
+              <div class="text-white/70 text-sm">% Inclusive</div>
+            </div>
+            <div class="text-center">
+              <div class="font-display text-4xl text-gold">40+</div>
+              <div class="text-white/70 text-sm">Years Trust</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- News & Events Section -->
+    <section id="news" class="py-20 lg:py-32 bg-white" aria-labelledby="news-title">
+      <div class="container mx-auto px-6 lg:px-12">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between mb-12">
+          <div>
+            <span class="inline-block px-4 py-1.5 rounded-full bg-gold/10 text-gold text-sm font-medium mb-4 animate-fade-in-up">Updates</span>
+            <h2 id="news-title" class="font-serif text-4xl lg:text-5xl text-brown animate-fade-in-up delay-1">News & Events</h2>
+          </div>
+          <a href="#all-news" class="btn-secondary mt-6 md:mt-0 animate-fade-in-up delay-2">View All News</a>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 stagger-children" id="news-grid">
+          <!-- News 1 -->
+          <article class="bg-cream rounded-2xl border border-gold/20 overflow-hidden card-hover group">
+            <div class="aspect-video bg-teal/10 relative overflow-hidden">
+              <svg class="w-full h-full text-teal/20" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice">
+                <circle cx="200" cy="112" r="50" fill="currentColor"/>
+                <path d="M180,105 L220,112 L180,119 Z" fill="#A8C9C8"/>
+              </svg>
+              <div class="absolute top-4 left-4 bg-gold text-brown text-xs font-semibold px-3 py-1 rounded-full">STEM</div>
+            </div>
+            <div class="p-6">
+              <time class="text-sm text-brown/50 block mb-2">July 2024</time>
+              <h3 class="font-serif text-xl text-brown mb-2 group-hover:text-gold transition-colors">Imperial College STEM Workshop Concludes</h3>
+              <p class="text-brown/60 text-sm leading-relaxed">35 students completed coding and renewable energy workshops with Imperial College London mentors.</p>
+            </div>
+          </article>
+
+          <!-- News 2 -->
+          <article class="bg-cream rounded-2xl border border-terracotta/20 overflow-hidden card-hover group">
+            <div class="aspect-video bg-terracotta/10 relative overflow-hidden">
+              <svg class="w-full h-full text-terracotta/20" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice">
+                <path d="M100,180 L200,80 L300,180 Z" fill="currentColor" stroke="#cc7357" stroke-width="4"/>
+                <rect x="190" y="140" width="20" height="40" fill="#8b4513"/>
+              </svg>
+              <div class="absolute top-4 left-4 bg-terracotta text-white text-xs font-semibold px-3 py-1 rounded-full">Sports</div>
+            </div>
+            <div class="p-6">
+              <time class="text-sm text-brown/50 block mb-2">June 2024</time>
+              <h3 class="font-serif text-xl text-brown mb-2 group-hover:text-terracotta transition-colors">Inter-House Sports Championship</h3>
+              <p class="text-brown/60 text-sm leading-relaxed">Four houses compete in athletics, football, and team events. Blue House takes the trophy for 2024.</p>
+            </div>
+          </article>
+
+          <!-- News 3 -->
+          <article class="bg-cream rounded-2xl border border-growth/20 overflow-hidden card-hover group">
+            <div class="aspect-video bg-growth/10 relative overflow-hidden">
+              <svg class="w-full h-full text-growth/20" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice">
+                <circle cx="200" cy="112" r="60" fill="none" stroke="currentColor" stroke-width="3"/>
+                <path d="M200,52 L200,172 M140,112 L260,112" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                <circle cx="200" cy="112" r="10" fill="currentColor"/>
+              </svg>
+              <div class="absolute top-4 left-4 bg-growth text-white text-xs font-semibold px-3 py-1 rounded-full">Academic</div>
+            </div>
+            <div class="p-6">
+              <time class="text-sm text-brown/50 block mb-2">May 2024</time>
+              <h3 class="font-serif text-xl text-brown mb-2 group-hover:text-growth transition-colors">Honors Roll Announced for Term 2</h3>
+              <p class="text-brown/60 text-sm leading-relaxed">42 students achieve honors status. Principal commends dedication across all year groups.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-brown text-cream relative overflow-hidden" role="contentinfo">
+      <!-- Decorative elements -->
+      <div class="absolute inset-0" aria-hidden="true">
+        <div class="absolute top-0 left-1/4 w-72 h-72 bg-gold/5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-terracotta/10 rounded-full blur-3xl"></div>
+      </div>
+
+      <div class="container mx-auto px-6 lg:px-12 py-16 lg:py-24 relative z-10">
+        <div class="grid lg:grid-cols-4 gap-12 lg:gap-16 mb-16">
+          <!-- Brand Column -->
+          <div class="lg:col-span-1">
+            <a href="#home" class="flex items-center gap-3 mb-6" aria-label="Hillcrest College Home">
+              <div class="w-12 h-12">
+                <svg viewBox="0 0 60 60" class="w-full h-full" aria-hidden="true">
+                  <polygon points="30,8 10,50 50,50" fill="var(--heritage-gold)" stroke="var(--heritage-cream)" stroke-width="2"/>
+                  <rect x="26" y="38" width="8" height="14" fill="var(--heritage-cream)"/>
+                  <circle cx="16" cy="6" r="5" fill="var(--heritage-gold)"/>
+                  <path d="M25 30 L35 30" stroke="var(--growth-green)" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div>
+                <span class="font-display text-2xl text-cream">Hillcrest</span>
+                <span class="block text-xs text-gold font-medium tracking-wide">College Calabar</span>
+              </div>
+            </a>
+            <p class="text-cream/70 leading-relaxed mb-6">
+              Where every child finds their place. 40+ years of inclusive excellence on the hilltop in Calabar.
+            </p>
+            <div class="flex gap-4">
+              <a href="#" class="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center text-gold hover:bg-gold/20 transition-colors" aria-label="Facebook">
+                <i data-feather="facebook" class="w-5 h-5"></i>
+              </a>
+              <a href="#" class="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center text-gold hover:bg-gold/20 transition-colors" aria-label="Twitter">
+                <i data-feather="twitter" class="w-5 h-5"></i>
+              </a>
+              <a href="#" class="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center text-gold hover:bg-gold/20 transition-colors" aria-label="Instagram">
+                <i data-feather="instagram" class="w-5 h-5"></i>
+              </a>
+              <a href="#" class="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center text-gold hover:bg-gold/20 transition-colors" aria-label="LinkedIn">
+                <i data-feather="linkedin" class="w-5 h-5"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <nav aria-label="Quick links">
+            <h3 class="font-serif text-lg text-gold mb-5">Quick Links</h3>
+            <ul class="space-y-3">
+              <li><a href="#home" class="text-cream/70 hover:text-gold transition-colors">Home</a></li>
+              <li><a href="#our-story" class="text-cream/70 hover:text-gold transition-colors">Our Story</a></li>
+              <li><a href="#mission" class="text-cream/70 hover:text-gold transition-colors">Mission & Values</a></li>
+              <li><a href="#stem" class="text-cream/70 hover:text-gold transition-colors">STEM Partnership</a></li>
+              <li><a href="#apply" class="text-cream/70 hover:text-gold transition-colors">Admissions</a></li>
+              <li><a href="#community" class="text-cream/70 hover:text-gold transition-colors">Community</a></li>
+              <li><a href="#news" class="text-cream/70 hover:text-gold transition-colors">News & Events</a></li>
+            </ul>
+          </nav>
+
+          <!-- Contact Info -->
+          <div>
+            <h3 class="font-serif text-lg text-gold mb-5">Contact Us</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <div class="w-8 h-8 rounded-lg bg-gold/10 flex items-center justify-center flex-shrink-0">
+                  <i data-feather="map-pin" class="w-5 h-5 text-gold"></i>
+                </div>
+                <div>
+                  <p class="text-cream/70">Lemna Road, Ikot Effanga Mkpa</p>
+                  <p class="text-cream/70">G.P.O. Box 462, Calabar</p>
+                  <p class="text-cream/70">Cross River State 541102</p>
+                </div>
+              </li>
+              <li class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-gold/10 flex items-center justify-center flex-shrink-0">
+                  <i data-feather="phone" class="w-5 h-5 text-gold"></i>
+                </div>
+                <div>
+                  <a href="tel:+2348081039922" class="text-cream/70 hover:text-gold transition-colors">+234 808 103 9922</a>
+                  <br>
+                  <a href="tel:+2348062951394" class="text-cream/70 hover:text-gold transition-colors">+234 806 295 1394</a>
+                </div>
+              </li>
+              <li class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-gold/10 flex items-center justify-center flex-shrink-0">
+                  <i data-feather="mail" class="w-5 h-5 text-gold"></i>
+                </div>
+                <a href="mailto:info@hillcrestschools.net" class="text-cream/70 hover:text-gold transition-colors">info@hillcrestschools.net</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Newsletter / Office Hours -->
+          <div>
+            <h3 class="font-serif text-lg text-gold mb-5">Office Hours</h3>
+            <ul class="space-y-3 text-cream/70 mb-8">
+              <li class="flex justify-between"><span>Monday – Friday</span><span class="text-gold">8:00 AM – 4:00 PM</span></li>
+              <li class="flex justify-between"><span>Saturday</span><span class="text-gold">9:00 AM – 1:00 PM</span></li>
+              <li class="flex justify-between"><span>Sunday</span><span class="text-gold">Closed</span></li>
+            </ul>
+            <h3 class="font-serif text-lg text-gold mb-3">Stay Informed</h3>
+            <p class="text-cream/70 text-sm mb-4">Receive updates on admissions, events, and school news.</p>
+            <form class="flex gap-2" aria-label="Newsletter signup">
+              <input type="email" placeholder="Your email" class="flex-1 px-4 py-2 rounded-lg bg-gold/5 border border-gold/20 text-brown placeholder-brown/50 focus:outline-none focus:border-gold focus:bg-white" aria-label="Email address">
+              <button type="submit" class="bg-gold text-brown font-semibold px-5 py-2 rounded-lg hover:bg-gold/90 transition-colors" aria-label="Subscribe">
+                <i data-feather="send" class="w-5 h-5"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p class="text-cream/50 text-sm">
+            &copy; 2024 Hillcrest College Calabar. All rights reserved. Established 1983.
+          </p>
+          <div class="flex flex-wrap items-center justify-center gap-6 text-sm text-cream/50">
+            <a href="#privacy" class="hover:text-gold transition-colors">Privacy Policy</a>
+            <a href="#terms" class="hover:text-gold transition-colors">Terms of Service</a>
+            <a href="#accessibility" class="hover:text-gold transition-colors">Accessibility</a>
+            <span>Registered with Cross River State Ministry of Education (Reg. #95)</span>
+          </div>
+          <div class="flex items-center gap-2 text-cream/50 text-sm">
+            <span>Made with</span>
+            <i data-feather="heart" class="w-4 h-4 text-terracotta" aria-hidden="true"></i>
+            <span>on the hilltop</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 rounded-full bg-gold text-brown flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300 z-40 hover:bg-gold/90 hover:scale-105" aria-label="Back to top">
+    <i data-feather="chevron-up" class="w-6 h-6"></i>
+  </button>
+
+  <script>
+    // Initialize Feather Icons
+    feather.replace();
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+      mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+      mobileMenu.classList.toggle('hidden');
+      
+      // Animate menu icon
+      const icon = mobileMenuBtn.querySelector('i');
+      if (!isExpanded) {
+        icon.setAttribute('data-feather', 'x');
+      } else {
+        icon.setAttribute('data-feather', 'menu');
+      }
+      feather.replace();
+    });
+
+    // Close mobile menu on link click
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        const icon = mobileMenuBtn.querySelector('i');
+        icon.setAttribute('data-feather', 'menu');
+        feather.replace();
+      });
+    });
+
+    // Back to Top Button
+    const backToTop = document.getElementById('back-to-top');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTop.classList.remove('opacity-0', 'invisible');
+        backToTop.classList.add('opacity-100', 'visible');
+      } else {
+        backToTop.classList.add('opacity-0', 'invisible');
+        backToTop.classList.remove('opacity-100', 'visible');
+      }
+    });
+
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Intersection Observer for Scroll Animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    // Observe stagger containers
+    document.querySelectorAll('.stagger-children').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Observe individual animated elements
+    document.querySelectorAll('[class*="animate-fade"], [class*="animate-slide"], [class*="animate-mountain"]').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const target = document.querySelector(targetId);
+        if (target) {
+          e.preventDefault();
+          const headerHeight = document.querySelector('header').offsetHeight;
+          const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight;
+          
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Header scroll effect
+    const header = document.querySelector('header');
+    let lastScroll = 0;
+    
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.scrollY;
+      
+      if (currentScroll > 100) {
+        header.classList.add('bg-white/95', 'shadow-md');
+      } else {
+        header.classList.remove('shadow-md');
+      }
+      
+      lastScroll = currentScroll;
+    });
+
+    // Dropdown keyboard navigation
+    document.querySelectorAll('.dropdown').forEach(dropdown => {
+      const trigger = dropdown.querySelector('button');
+      const menu = dropdown.querySelector('.dropdown-menu');
+      
+      trigger.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          trigger.click();
+        }
+      });
+    });
+
+    console.log('Hillcrest College index2.html loaded successfully');
+  </script>
+</body>
+</html>
