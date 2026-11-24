@@ -3,11 +3,13 @@ import { Outfit, Cormorant_Garamond, Lobster } from 'next/font/google'
 import Link from 'next/link'
 import { MobileHeader } from '@/app/components/MobileHeader'
 
+// Use local font loading with preload: false for offline builds
 const outfit = Outfit({
   subsets: ['latin'],
   variable: '--font-outfit',
   weight: ['300', '400', '500', '600', '700'],
   display: 'swap',
+  preload: false,
 })
 
 const cormorant = Cormorant_Garamond({
@@ -15,6 +17,7 @@ const cormorant = Cormorant_Garamond({
   variable: '--font-cormorant',
   weight: ['300', '400', '500', '600', '700'],
   display: 'swap',
+  preload: false,
 })
 
 const lobster = Lobster({
@@ -22,6 +25,7 @@ const lobster = Lobster({
   variable: '--font-lobster',
   weight: ['400'],
   display: 'swap',
+  preload: false,
 })
 
 export const metadata = {

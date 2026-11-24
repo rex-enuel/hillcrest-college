@@ -654,38 +654,38 @@ export function HillVisual() {
             <span className="text-xs font-semibold tracking-wider" style={{ color: carnivalColors.gold }}>LEGEND</span>
           </div>
           <div className="space-y-2 text-xs md:text-right" style={{ color: 'rgba(254, 248, 240, 0.8)' }}>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 md:justify-end">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style={{ color: carnivalColors.gold }}>
                 <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" strokeWidth="2"/>
               </svg>
               <span>"First in Nigeria" Heritage Badge</span>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 md:justify-end">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style={{ color: carnivalColors.electricBlue }}>
                 <path d="M2 12C2 12 8 8 12 12C16 16 22 12 22 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
               </svg>
               <span>River Delta Motifs</span>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 md:justify-end">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style={{ color: carnivalColors.primaryLighter }}>
                 <path d="M12 22C12 22 17 17 22 12C17 7 12 2 12 2C7 7 2 12 2 12C7 17 12 22 12 22Z" stroke="currentColor" strokeWidth="1.5"/>
               </svg>
               <span>Nsibidi Heritage Symbols</span>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 md:justify-end">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style={{ color: carnivalColors.primaryLighter }}>
                 <path d="M12 22V12M12 22L7 17M12 22L17 17" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
                 <path d="M7 17L12 12L17 17" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
               </svg>
               <span>Conservation & Nature</span>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 md:justify-end">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style={{ color: carnivalColors.orange }}>
                 <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" stroke="currentColor" strokeWidth="2"/>
               </svg>
               <span>Carnival Spirit Colors</span>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 md:justify-end">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style={{ color: carnivalColors.gold }}>
                 <path d="M3 21H21M5 21V7M12 21V7M19 21V7" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
               </svg>
